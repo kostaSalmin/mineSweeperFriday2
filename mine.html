@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mine.css">
+    <title>mine sweeper</title>
+</head>
+
+<body onload="init()">
+    <h1>mine sweeper</h1>
+    <div class="menu">
+        <span class="counter"></span>
+        <button class="restart" onclick="init()"></button>
+        <span class="timer"></span>
+    </div>
+    <table oncontextmenu="return false">
+        <tbody class="board"></tbody>
+    </table>
+    <button class="easy" onclick="gLevel.size = 4; gLevel.mines = 2;init()">easy 🥱</button>
+    <button class="normal" onclick="gLevel.size = 8 ; gLevel.mines = 6;init()">normal 🙂</button>
+    <button class="hard" onclick="gLevel.size = 12 ; gLevel.mines = 10;init()">hard 😮</button>
+    <div class="modal"></div>
+
+    <script src="js/mine.js"></script>
+    <script src="js/util.js"></script>
+</body>
+
+</html>
